@@ -38,7 +38,7 @@ class AppModule {
         .build()
 
     @Provides
-    fun providesShowsApi(retrofit: Retrofit): CatFactApi = retrofit.create(CatFactApi::class.java)
+    fun providesApi(retrofit: Retrofit): CatFactApi = retrofit.create(CatFactApi::class.java)
 
     @Provides
     fun providesDatabase(app: Application): CatFactDatabase {
