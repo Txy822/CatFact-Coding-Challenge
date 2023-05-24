@@ -28,20 +28,7 @@ fun DetailScreen(
     navController: NavController,
 ) {
 
-    val height= catFactModel?.height.toString()
-    val width =catFactModel?.width.toString()
-    val  url = catFactModel?.url
-    val origin =catFactModel?.origin
-    val name  = catFactModel?.name
-    val adaptability =catFactModel?.adaptability
-    val catFriendly =catFactModel?.catFriendly
-    val dogFriendly =catFactModel?.dogFriendly
-    val desc =catFactModel?.desc
-    val intelligence= catFactModel?.intelligence
-    val  affectionLevel =catFactModel?.affectionLevel
-    val lifeSpan =catFactModel?.lifeSpan
-
-    val imagePainter = rememberImagePainter(data = url, builder = {
+    val imagePainter = rememberImagePainter(data = catFactModel?.url, builder = {
         placeholder(R.drawable.placeholder)
     })
 
@@ -74,7 +61,7 @@ fun DetailScreen(
                 Row(Modifier.padding(top = 10.dp, start = 8.dp)) {
                     Box(Modifier
                         .fillMaxWidth()) {
-                        Text(text = name + " breed from "+origin, fontSize = 24.sp, fontStyle = FontStyle.Normal, fontWeight = FontWeight.W400)
+                        Text(text = catFactModel?.name + " breed from "+catFactModel?.origin, fontSize = 24.sp, fontStyle = FontStyle.Normal, fontWeight = FontWeight.W400)
                     }
                 }
                 Row(Modifier.padding(horizontal = 8.dp)) {
@@ -82,12 +69,12 @@ fun DetailScreen(
                         .fillMaxWidth(), contentAlignment = Alignment.CenterStart
                     ) {
                         Column {
-                            Text(text ="Life  Span "+lifeSpan+" years ,"+ " size of =" +width+"x"+height, fontSize = 16.sp, color = Color.Gray)
+                            Text(text ="Life  Span "+catFactModel?.lifeSpan+" years ,"+ " size of =" +catFactModel?.width+"x"+catFactModel?.height, fontSize = 16.sp, color = Color.Gray)
                             Spacer(modifier = Modifier.height(20.dp))
                             // Divider(color = Color.LightGray, thickness = 1.dp, modifier = Modifier.padding(vertical = 10.dp))
-                            Text(text = "This cat  has  adaptability: $adaptability,  intelligence: $intelligence, cat friendly: $catFriendly, dog friendly: $dogFriendly and  affection level: $affectionLevel")
+                            Text(text = "This cat  has  adaptability: ${catFactModel?.adaptability},  intelligence: ${catFactModel?.intelligence}, cat friendly: ${catFactModel?.catFriendly}, dog friendly: ${catFactModel?.dogFriendly} and  affection level: ${catFactModel?.affectionLevel}")
                             Divider(color = Color.LightGray, thickness = 1.dp, modifier = Modifier.padding(vertical = 10.dp))
-                            Text(text = desc.toString())
+                            Text(text = catFactModel?.desc.toString())
                         }
                     }
                 }
