@@ -4,6 +4,19 @@ This is simple coding challenge to illustrate how to use clean code architecture
 The app simply displays cats information including breeds. 
 
 
+    
+<!-- 
+<img src="img/img_7.png" width="400">
+<img src="img/img_8.png" width="400">
+<img src="img/img_6.png" width="400"> -->
+# UI
+<div style="display: flex; justify-content: center;">
+  <img src="img/img_7.png" alt="Screenshot 1" style="width: 33%;" />
+  <img src="img/img_8.png" alt="Screenshot 2" style="width: 33%;" />
+  <img src="img/img_6.png" alt="Screenshot 3" style="width: 33%;" />
+ 
+</div>
+
 # Tech Stacks
 This project uses many of the popular libraries, plugins and tools of the android ecosystem.
 
@@ -37,10 +50,5 @@ This project uses many of the popular libraries, plugins and tools of the androi
     - [Truth](https://github.com/google/truth) - Truth makes your test assertions and failure messages more readable.
     - [Flow Test](https://developer.android.com/kotlin/flow/test) - Testing flows using Turbine 
     - [Compose UI Test](https://developer.android.com/jetpack/compose/testing) - Test Ui compoents using sematics tree 
-    
-
-<img src="img/img_7.png" width="400">
-<img src="img/img_8.png" width="400">
-<img src="img/img_6.png" width="400">
 
 
